@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.sim/software/gui/.metadata
+sim/software/gui/build/
+sim/software/gui/.dart_tool/
+sim/software/gui/pubspec.lock
+sim/software/sim_test/*.json
