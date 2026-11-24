@@ -1,0 +1,82 @@
+
+# 🚀 ASME Lunabotics 2026 University of Miami – Electrical Subsystem
+
+Welcome to the official repository for the electrical subsystem of the University of Miami’s ASME Lunabotics team for the **2026 NASA Lunabotics Competition**.
+
+---
+
+This repository documents the design, implementation, and testing of the rover’s electrical system, emphasizing high reliability, efficiency, and simplicity.
+
+# 2026 Design Goals
+
+- Design an effective system with high reliability, minimal points of failure, and strategic redundancies while keeping it simple with minimal components and maximum efficiency.
+
+- Focus on real-time data logging of current, voltage, power, temperature, and speed for post-analysis and future optimization.
+d
+- Reduce wiring complexity by using multiplexed communication protocols.
+
+- Ensure reliable wired communication and power distribution to motors and other subsystems.
+---
+# 2026 Proposed Electrical Architecture
+
+<p align="center">
+  <img src="2025-2026/Assets/High voltage archeticture.png" alt="High Voltage Electrical Architecture" width="600"/>
+  <p align="center">
+  <b> High Voltage Electrical Architecture </b>
+  </p>
+</p>
+
+<p align="center">
+  <img src="2025-2026/Assets/Control archeticture.png" alt="Control Electrical Architecture" width="600"/>
+</p>
+  <p align="center">
+  <b> Control Electrical Architecture </b>
+  </p>
+
+---
+## Preliminary Design Review (PDR)
+
+As part of the NASA Systems Engineering methodology, our team conducts a **Preliminary Design Review (PDR)** to evaluate and validate the proposed system design before detailed development.  
+
+This review presentation includes:
+
+1. **Responsibilities and Main Goals** – Overview of team roles and project objectives  
+2. **Last Year’s System and Proposed Changes** – Comparison and improvements over the previous design  
+3. **Design Overview** – High-level architecture and subsystem details  
+4. **Verification Plans** – How the design will be tested and validated  
+5. **Risk Matrix** – Identification and mitigation of potential risks
+
+📄 **View the PDR presentation:**  
+[Electrical PDR – ASME UM (PDF)](https://github.com/umasme/2025-2026/blob/main/embeded-low-level-electrical/2025-2026/Assets/Electrical%20PDR--%20ASME%20UM.pdf)
+
+---
+## High-Current Power Distribution Board
+This high-current board distributes power to all outputs, including the four drivetrain motors, the excavation motor, the deposition motor, and two linear actuators.
+
+<p align="center">
+  <img src="2025-2026/PCBs_schematics/assets/pcb_PDB_board.png" alt="High-Current Power Distribution Board PCB" width="600"/>
+</p>
+<p align="center">
+  <b> High-Current Power Distribution Board PCB </b>
+</p>
+
+[For more details refer to this link](https://github.com/umasme/2025-2026/tree/main/embeded-low-level-electrical/2025-2026/PCBs_schematics/ASME%20UM%20High%20current%20board%20EDIT%20HERE)
+
+---
+## Low-Level Control Board based on Teensy 4.1
+
+<p align="center">
+  <img src="2025-2026/PCBs_schematics/assets/pcb_control_board.png" alt="Low-Level Control Board based on Teensy 4.1 PCB" width="600"/>
+</p>
+<p align="center">
+  <b> Low-Level Control Board based on Teensy 4.1 PCB </b>
+</p>
+
+[For more details refer to this link](https://github.com/umasme/2025-2026/tree/main/embeded-low-level-electrical/2025-2026/PCBs_schematics/ASME%20UM%20Control%20Board%20EDIT%20HERE)
+
+
+---
+##  🎯2026 Season Plan 
+We finalized the season plan for 2026 for the electrical subsystem with detailed performance analysis for each part we used in the electrical system and proposed improvement.
+
+**[Click here to access the 2025 season plan](https://www.overleaf.com/read/gmnmmjygcdmp#dd8f39)**

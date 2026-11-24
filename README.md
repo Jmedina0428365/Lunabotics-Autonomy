@@ -1,0 +1,97 @@
+# 🚀 NASA Lunabotics 2026 — University of Miami ASME
+
+Robust, ROS 2–based software stack and supporting assets for our lunar excavation rover.  
+This repository houses **software, hardware, simulation, datasets, and documentation** to support the NASA Lunabotics 2026 competition.  
+
+---
+## To Build
+1. Download Docker
+2. Open VS Code and switch to WS directory
+3. Install the dev containers extension
+4. Control + Shift + P to access command palette
+5. Search for Dev Containers: Reopen in Container
+6. Voila
+
+## Sensors
+1. D435i (TBD)
+2. Oak D-lite (TBD)
+3. Power sensor
+4. Encoders
+5. Linear encoders
+6. Cameras
+
+## Actuators
+1. Four motors
+2. Linear Actuators
+
+## After Each Commit
+Update DEVLOG.md with a summary of changes. Commits shall be made to the develop branch after main branch docker is working.
+
+## 📖 Project Overview
+
+Our rover integrates:
+
+- **Perception** — stereo depth, object detection, terrain mapping  
+- **Localization & Navigation** — SLAM, sensor fusion, path planning  
+- **Autonomy** — state machines / behavior trees for excavation & hauling  
+- **Control & Teleop** — motor drivers, teleop interfaces, web dashboard  
+- **Simulation** — Ignition Gazebo worlds, scenarios, and URDF models  
+- **Documentation** — aligned with NASA Systems Engineering (SRR, PDR, CDR, ConOps)  
+
+---
+
+## 📂 Repository Layout
+
+```text
+lunabotics-2025/
+├─ README.md                     # Project overview (this file)
+├─ LICENSE
+├─ .github/workflows/            # CI/CD pipelines
+├─ .devcontainer/                # VS Code Dev Containers
+├─ docker/                       # Development & runtime Dockerfiles
+├─ docs/                         # Documentation
+│  ├─ index.md
+│  ├─ ConOps/                    # SRR/PDR/CDR deliverables
+│  ├─ Architectures/             # Block/state diagrams
+│  ├─ MissionRules/              # Ops rules, FMEA links
+│  ├─ Tutorials/                 # Step-by-step guides
+│  └─ Calibration/               # Sensor/actuator calibration
+├─ hardware/                     # Mechanical + electrical
+│  ├─ electrical/                # Schematics, PCB, BOM
+│  ├─ mechanical/                # CAD models, drawings
+│  └─ configs/                   # Wiring tables, pin maps
+├─ datasets/                     # Large files (via Git LFS)
+│  ├─ bags/                      # ROS bag recordings
+│  ├─ maps/                      # Occupancy/elevation maps
+│  └─ test_scenes/               # Images, point clouds
+├─ sim/                          # Simulation assets
+│  ├─ worlds/                    # Ignition/Gazebo worlds
+│  ├─ models/                    # URDF meshes, STL/DAE
+│  └─ scenarios/                 # Scenario configs
+├─ examples/                     # Cross-package & full-system demos
+│  ├─ sim_demo.launch.py
+│  ├─ teleop_example.md
+│  └─ rviz_configs/
+├─ tools/                        # Utility scripts
+│  ├─ log_tools/                 # Bag→CSV, plotting
+│  ├─ calibration/               # Camera/IMU calibration
+│  ├─ deploy/                    # Deployment helpers
+│  └─ ci/                        # CI support scripts
+└─ ros2_ws/                      # ROS 2 workspace
+   ├─ src/
+   │  ├─ lunabotics_bringup/     # System launch & params
+   │  ├─ lunabotics_description/ # URDF/Xacro and meshes
+   │  ├─ lunabotics_msgs/        # Custom messages & services
+   │  ├─ lunabotics_hw/          # Hardware drivers
+   │  ├─ lunabotics_perception/  # Cameras, detection
+   │  ├─ lunabotics_mapping/     # SLAM & maps
+   │  ├─ lunabotics_localization/# State estimation
+   │  ├─ lunabotics_navigation/  # Planning & control
+   │  ├─ lunabotics_control/     # Low-level control loops
+   │  ├─ lunabotics_mission/     # Autonomy FSM/BT
+   │  ├─ lunabotics_teleop/      # Joystick / keyboard teleop
+   │  ├─ lunabotics_dashboard/   # Web UI & ROS bridge
+   │  └─ lunabotics_sim/         # Simulation plugins & launches
+   ├─ build/                     # (ignored) colcon build output
+   ├─ install/                   # (ignored) colcon install
+   └─ log/                       # (ignored) colcon logs
